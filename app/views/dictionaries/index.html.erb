@@ -1,0 +1,37 @@
+<h1>Listing dictionaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Difficulty</th>
+      <th>Access</th>
+      <th>User</th>
+      <th>Language own</th>
+      <th>Language for</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dictionaries.each do |dictionary| %>
+      <tr>
+        <td><%= dictionary.title %></td>
+        <td><%= dictionary.difficulty %></td>
+        <td><%= dictionary.access %></td>
+        <td><%= dictionary.user.name %></td>
+        <td><%= dictionary.language_own.name %></td>
+        <td><%= dictionary.language_for.name %></td>
+        <td><%= link_to 'Show', dictionary %></td>
+        <td><%= link_to 'Edit', edit_dictionary_path(dictionary) %></td>
+        <td><%= link_to 'Destroy', dictionary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dictionary', new_dictionary_path %>

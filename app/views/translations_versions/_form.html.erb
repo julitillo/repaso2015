@@ -1,0 +1,25 @@
+<%= form_for(@translations_version) do |f| %>
+  <% if @translations_version.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@translations_version.errors.count, "error") %> prohibited this translations_version from being saved:</h2>
+
+      <ul>
+      <% @translations_version.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :version_id %><br>
+    <%= f.text_field :version_id %>
+  </div>
+  <div class="field">
+    <%= f.label :translation_id %><br>
+    <%= f.text_field :translation_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

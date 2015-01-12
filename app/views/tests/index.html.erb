@@ -1,0 +1,36 @@
+<h1>Listing tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Version</th>
+      <th>Date start</th>
+      <th>Date end</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tests.each do |test| %>
+      <tr>
+        <td><%= test.user.name %></td>
+        <td><%= test.name %></td>
+        <td><%= test.version.dictionary.title %></td>
+        <td><%= test.date_start %></td>
+        <td><%= test.date_end %></td>
+        <td><%= link_to 'Show', test %></td>
+        <td><%= link_to 'Edit', edit_test_path(test) %></td>
+        <td><%= link_to 'Destroy', test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Launch', launch_test_path(test) %></td>      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test', new_test_path %>

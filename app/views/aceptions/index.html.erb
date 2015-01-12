@@ -1,0 +1,33 @@
+<h1>Listing aceptions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sequencial</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Word</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aceptions.each do |aception| %>
+      <tr>
+        <td><%= aception.sequencial %></td>
+        <td><%= aception.name %></td>
+        <td><%= aception.description %></td>
+        <td><%= aception.word %></td>
+        <td><%= link_to 'Show', aception %></td>
+        <td><%= link_to 'Edit', edit_aception_path(aception) %></td>
+        <td><%= link_to 'Destroy', aception, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aception', new_aception_path %>

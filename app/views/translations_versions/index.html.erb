@@ -1,0 +1,29 @@
+<h1>Listing translations_versions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Translation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @translations_versions.each do |translations_version| %>
+      <tr>
+        <td><%= translations_version.version %></td>
+        <td><%= translations_version.translation %></td>
+        <td><%= link_to 'Show', translations_version %></td>
+        <td><%= link_to 'Edit', edit_translations_version_path(translations_version) %></td>
+        <td><%= link_to 'Destroy', translations_version, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Translations version', new_translations_version_path %>

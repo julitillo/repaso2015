@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @translations_version.version %>
+</p>
+
+<p>
+  <strong>Translation:</strong>
+  <%= @translations_version.translation %>
+</p>
+
+<%= link_to 'Edit', edit_translations_version_path(@translations_version) %> |
+<%= link_to 'Back', translations_versions_path %>

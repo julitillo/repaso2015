@@ -1,0 +1,23 @@
+<h1>traslation Launcher</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>palabra</th>
+      <th>aception_own</th>
+      <th>palabra</th>
+      <th>aception_for</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @launch.each do |traslation| %>
+      <tr>
+        <td><%= traslation.aception_own.word.name %></td>
+        <td>(<%= traslation.aception_own.name %>)</td>
+        <td><%= traslation.aception_for.word.name %></td>
+        <td>(<%= traslation.aception_for.name %>)</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

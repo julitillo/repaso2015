@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  version_id: 
+  translation_id: 
+
+two:
+  version_id: 
+  translation_id: 

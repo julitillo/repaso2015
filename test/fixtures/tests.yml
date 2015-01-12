@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  name: MyString
+  dictionary_id: 
+  date_start: 2014-11-06 18:31:53
+  date_end: 2014-11-06 18:31:53
+
+two:
+  user_id: 
+  name: MyString
+  dictionary_id: 
+  date_start: 2014-11-06 18:31:53
+  date_end: 2014-11-06 18:31:53

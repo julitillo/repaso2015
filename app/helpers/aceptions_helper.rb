@@ -1,0 +1,2 @@
+module AceptionsHelper
+end
